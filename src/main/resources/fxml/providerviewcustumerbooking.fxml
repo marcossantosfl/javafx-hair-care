@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vbox" prefHeight="400.0" prefWidth="302.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.provider.ProviderViewCustumerBooking">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="316.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="97.0" layoutX="105.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="calendar.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="92.0" layoutY="158.0" prefHeight="18.0" prefWidth="141.0" text="Manage your bookings" textFill="KHAKI" />
+            <ComboBox fx:id="comboBox" layoutX="21.0" layoutY="200.0" prefHeight="28.0" prefWidth="256.0" style="-fx-text-fill: WHITE; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-border-radius: 30;" />
+            <JFXButton fx:id="buttonAccept" layoutX="74.0" layoutY="311.0" mnemonicParsing="false" onAction="#handleAcceptButtonAction" prefHeight="32.0" prefWidth="75.0" style="-fx-text-fill: WHITE; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-border-radius: 30;" text="Confirm" textFill="#FFFFFF" visible="false" />
+            <JFXButton fx:id="buttonDeny" layoutX="166.0" layoutY="311.0" mnemonicParsing="false" onAction="#handleDenyButtonAction" prefHeight="32.0" prefWidth="75.0" style="-fx-text-fill: WHITE; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-border-radius: 30;" text="Cancel" textFill="#FFFFFF" visible="false" />
+            <Hyperlink layoutX="7.0" layoutY="3.0" onAction="#handleAddDateButtonAction" text="Add date" textFill="KHAKI" />
+            <Hyperlink layoutX="7.0" layoutY="22.0" onAction="#handleRemoveButtonAction" text="Remove date" textFill="KHAKI" />
+            <Hyperlink layoutX="8.0" layoutY="41.0" onAction="#handleLogoutButtonAction" text="Logout" textFill="KHAKI" />
+            <Label fx:id="labelNoCustumer" layoutX="86.0" layoutY="185.0" prefHeight="18.0" prefWidth="141.0" text="No bookings to accept" textFill="KHAKI" visible="false" />
+            <ImageView fx:id="star1" fitHeight="15.0" fitWidth="15.0" layoutX="84.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="star_grey.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="star2" fitHeight="15.0" fitWidth="15.0" layoutX="111.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="star_grey.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="star3" fitHeight="15.0" fitWidth="15.0" layoutX="139.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="star_grey.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="star4" fitHeight="15.0" fitWidth="15.0" layoutX="167.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="star_grey.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="star5" fitHeight="15.0" fitWidth="15.0" layoutX="196.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="star_grey.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+    </children>
+</VBox>

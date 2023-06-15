@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.layout.VBox?>
+
+ <VBox fx:id="vbox" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.custumer.WhichAreaController" prefHeight="400.0" prefWidth="302.0" BorderPane.alignment="CENTER">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="316.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="buttonSouth" onAction="#handleSouthButtonAction"  layoutX="83.0" layoutY="196.0" prefHeight="32.0" prefWidth="154.0" style="-fx-background-color: #1C1C1C; -fx-border-color: #F0E68C; -fx-background-radius: 30; -fx-border-radius: 30;" text="Dublin South" textFill="#FFFFFF" />
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="105.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="location.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="buttonNorth" onAction="#handleNorthButtonAction" layoutX="83.0" layoutY="235.0" prefHeight="32.0" prefWidth="154.0" style="-fx-background-color: #1C1C1C; -fx-border-color: #F0E68C; -fx-background-radius: 30; -fx-border-radius: 30;" text="Dublin North" textFill="#FFFFFF" />
+            <Label visible="false" layoutX="103.0" layoutY="292.0" prefHeight="18.0" prefWidth="130.0" text="or search by name" />
+            <TextField visible="false" layoutX="84.0" layoutY="309.0" style="-fx-border-color: #1E90FF;" />
+            <JFXButton visible="false" layoutX="131.0" layoutY="348.0" prefHeight="31.0" prefWidth="58.0" style="-fx-background-color: #1E90FF;" text="Search" textFill="#5b1d1d" />
+            <Label layoutX="106.0" layoutY="161.0" prefHeight="18.0" prefWidth="130.0" textFill="KHAKI" text="Select the location" />
+            <Hyperlink onAction="#handleLogoutButtonAction"  layoutX="14.0" layoutY="33.0" text="Logout" textFill="KHAKI" />
+            <Hyperlink  onAction="#handleBookingButtonAction" layoutX="14.0" layoutY="8.0" text="Bookings" textFill="KHAKI" />
+         </children>
+      </AnchorPane>
+    </children>
+</VBox>

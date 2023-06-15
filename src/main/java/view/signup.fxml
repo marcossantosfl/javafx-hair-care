@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:controller="controller.SignUpController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="306.0" style="-fx-background-color: #1E90FF;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="103.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="scissors.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="316.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton onAction="#handleSignUpButtonAction" fx:id="signUpButton" layoutX="83.0" layoutY="322.0" prefHeight="32.0" prefWidth="154.0" style="-fx-background-color: #1E90FF;" text="Sign up" textFill="#5b1d1d" />
+            <TextField  onAction="#handlenameFieldAction" fx:id="nameField" layoutX="82.0" layoutY="132.0" promptText="Your login" />
+            <PasswordField fx:id="passwordField" layoutX="84.0" layoutY="248.0" promptText="Your password" />
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="52.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="user.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="52.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="lock.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="126.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="users.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="emailField" layoutX="82.0" layoutY="172.0" promptText="Your email" />
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="52.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="email.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="phoneField" layoutX="82.0" layoutY="212.0" promptText="Your phone"  />
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="52.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="phone-call.png" />
+               </image>
+            </ImageView>
+            <JFXToggleButton onAction="#handleToggleButtonAction" fx:id="toggleField" layoutX="199.0" layoutY="267.0" minWidth="40.0" prefHeight="32.0" prefWidth="40.0" />
+            <Label layoutX="56.0" layoutY="285.0" prefHeight="24.0" prefWidth="166.0" text="I am a service provider" />
+            <ComboBox visible="false" fx:id="comboField" layoutX="83.0" layoutY="322.0" prefWidth="150.0" />
+            <Label fx:id="nameLabel" visible="false" layoutX="82.0" layoutY="154.0" prefHeight="18.0" prefWidth="233.0" text="You must enter your name" textFill="RED" />
+            <Label fx:id="emailLabel" visible="false" layoutX="82.0" layoutY="194.0" prefHeight="18.0" prefWidth="233.0" text="You must enter a valid email" textFill="RED" />
+            <Label fx:id="numberLabel" visible="false" layoutX="84.0" layoutY="233.0" prefHeight="18.0" prefWidth="233.0" text="You must enter a valid number" textFill="RED" />
+            <Label fx:id="passwordLabel" visible="false" layoutX="84.0" layoutY="269.0" prefHeight="18.0" prefWidth="233.0" text="You must enter a valid password" textFill="RED" />
+            <Label fx:id="locationLabel" visible="false" layoutX="85.0" layoutY="303.0" prefHeight="18.0" prefWidth="233.0" text="You must select the location" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

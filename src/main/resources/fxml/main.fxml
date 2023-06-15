@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.effect.DropShadow?>
+
+<BorderPane style="-fx-background-color: #1C1C1C; -fx-background-radius: 30; -fx-border-radius: 30;" fx:id="border" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <left>
+      <VBox style="-fx-background-color: #363636; -fx-background-radius: 30; -fx-border-radius: 30;" fx:id="vbox1" prefHeight="400.0" prefWidth="302.0">
+         <children>
+          <AnchorPane  prefHeight="400.0" prefWidth="306.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="130.0" fitWidth="145.0" layoutX="84.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="scissors.png" />
+               </image>
+            </ImageView>
+            <JFXButton onAction="#handleCloseButtonAction" layoutX="35.0" minWidth="32.0" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: #1C1C1C; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: khaki;" text="X" textFill="#FFFFFF">
+              </JFXButton>
+              <JFXButton onAction="#handleMinButtonAction" minWidth="32.0" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: #1C1C1C; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: khaki;" text="-" textFill="#FFFFFF">
+              </JFXButton>
+         </children>
+      </AnchorPane>
+         </children>
+         <effect>
+         <DropShadow color="#363636" height="5.0" radius="5.0" width="5.0" />
+        </effect>
+      </VBox>
+   </left>
+   <center>
+      <VBox fx:id="vbox2" prefHeight="200.0" prefWidth="100.0">
+         <children>
+          <AnchorPane prefHeight="400.0" prefWidth="316.0" style="-fx-background-color: #1C1C1C;" BorderPane.alignment="CENTER">
+         <children>
+         </children>
+               <effect>
+                  <DropShadow color="#1c1c1c" height="5.0" radius="5.0" width="5.0" />
+               </effect>
+      </AnchorPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vbox" fx:controller="controller.custumer.CancelBooking" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="302.0" BorderPane.alignment="CENTER">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="316.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="114.0" layoutX="102.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="calendar.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="102.0" layoutY="158.0" prefHeight="18.0" prefWidth="141.0" text="View your bookings" textFill="KHAKI" />
+            <JFXButton onAction="#handleCancelButtonAction" visible="false" fx:id="dateButton" layoutX="103.0" layoutY="295.0" prefHeight="32.0" prefWidth="103.0" style="-fx-text-fill: WHITE; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-border-radius: 30;" textFill="#FFFFFF" text="Cancel" />
+            <ComboBox fx:id="comboBox" layoutX="12.0" layoutY="229.0" prefHeight="28.0" prefWidth="273.0" style="-fx-text-fill: WHITE; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-border-radius: 30;" />
+            <Hyperlink onAction="#handleNewBookingButtonAction" layoutX="7.0" layoutY="3.0" text="New Booking" textFill="KHAKI" />
+            <Hyperlink onAction="#handleLogoutButtonAction" layoutX="8.0" layoutY="25.0" text="Logout" textFill="KHAKI" />
+            <Label visible="false" fx:id="labelNoBooking" layoutX="94.0" layoutY="192.0" prefHeight="18.0" prefWidth="141.0" text="No bookings made yet" textFill="KHAKI" />
+         </children>
+      </AnchorPane>
+    </children>
+ </VBox>

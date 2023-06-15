@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vbox" fx:controller="controller.custumer.LoginController" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="302.0" BorderPane.alignment="CENTER">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="316.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="emailField" layoutX="82.0" layoutY="132.0" promptText="Your login" style="-fx-border-color: #F0E68C; -fx-background-color: #1C1C1C; -fx-border-radius: 30; -fx-text-fill: WHITE;"/>
+            <PasswordField fx:id="passwordField" layoutX="83.0" layoutY="178.0" promptText="Your password" style="-fx-border-color: #F0E68C; -fx-background-color: #1C1C1C; -fx-border-radius: 30; -fx-text-fill: WHITE;" />
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="52.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="email.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="51.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="lock.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="82.0" fitWidth="89.0" layoutX="115.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="users.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="signIn" layoutX="83.0" layoutY="221.0" onAction="#handleSignInButtonAction" prefHeight="41.0" prefWidth="152.0" style="-fx-background-color: #1C1C1C; -fx-border-color: #F0E68C; -fx-background-radius: 30; -fx-border-radius: 30;" text="Sign in" textFill="#FFFFFF"></JFXButton>
+            <Hyperlink fx:id="hyperlink" layoutX="88.0" layoutY="270.0" onAction="#handleCreateButtonAction" prefHeight="26.0" prefWidth="158.0" text="I do not have an account" textFill="KHAKI" />
+            <Label fx:id="accountLabel" layoutX="78.0" layoutY="106.0" text="Login or password incorrect" textFill="KHAKI" visible="false" />
+            <Label fx:id="emailLabel" layoutX="77.0" layoutY="159.0" text="You must enter a valid email" textFill="KHAKI" visible="false" />
+         </children>
+      </AnchorPane>
+    </children>
+ </VBox>

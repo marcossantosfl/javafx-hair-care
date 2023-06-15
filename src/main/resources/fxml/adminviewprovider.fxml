@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<VBox fx:id="vbox" fx:controller="controller.admin.AdminViewProviderController" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="302.0" BorderPane.alignment="CENTER">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="316.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="105.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="admin.png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="comboBox" layoutX="19.0" layoutY="186.0" prefHeight="28.0" prefWidth="257.0" style="-fx-text-fill: WHITE; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-border-radius: 30;" />
+            <JFXButton fx:id="acceptButton" onAction="#handleAcceptButtonAction" visible="false" layoutX="83.0" layoutY="259.0" prefHeight="32.0" prefWidth="65.0" text="Accept" style="-fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-border-radius: 30;" textFill="#FFFFFF" />
+            <JFXButton fx:id="denyButton" onAction="#handleDenyButtonAction" visible="false" layoutX="161.0" layoutY="259.0" prefHeight="32.0" prefWidth="65.0" text="Deny" style="-fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-border-radius: 30;" textFill="#FFFFFF" />
+            <Hyperlink onAction="#handleLogoutButtonAction" layoutX="8.0" text="Logout" textFill="KHAKI" />
+            <Label layoutX="96.0" layoutY="148.0" prefHeight="18.0" prefWidth="149.0" text="No providers to accept" textFill="KHAKI" />
+         </children>
+      </AnchorPane>
+    </children>
+</VBox>

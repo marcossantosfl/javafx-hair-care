@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vbox" fx:controller="controller.provider.DateTimeProviderAdd" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="302.0" BorderPane.alignment="CENTER">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="316.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="101.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="calendar.png" />
+               </image>
+            </ImageView>
+             <JFXDatePicker fx:id="datePicker" defaultColor="KHAKI" layoutX="60.0" layoutY="156.0" nodeOrientation="INHERIT" style="-fx-text-fill: WHITE; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-border-radius: 30;" visible="true" />
+            <Label layoutX="90.0" layoutY="125.0" prefHeight="18.0" prefWidth="141.0" text="Select the day and time" textFill="KHAKI" />
+            <Hyperlink layoutX="7.0" layoutY="3.0" onAction="#handleRemoveBookingButtonAction" text="Remove date" textFill="KHAKI" />
+            <Hyperlink layoutX="7.0" layoutY="22.0" onAction="#handleViewBookingButtonAction" text="View Booking" textFill="KHAKI" />
+            <Hyperlink layoutX="8.0" layoutY="41.0" onAction="#handleLogoutButtonAction" text="Logout" textFill="KHAKI" />
+            <Label fx:id="labelNoTime1" layoutX="16.0" layoutY="239.0" prefHeight="18.0" prefWidth="271.0" text="This person does not have any time available" textFill="KHAKI" visible="false" />
+            <Label fx:id="labelNoTime2" layoutX="117.0" layoutY="255.0" prefHeight="18.0" prefWidth="171.0" text="at the time" textFill="KHAKI" visible="false" />
+            <Circle fx:id="circle" fill="#1c1c1c" layoutX="158.0" layoutY="291.0" radius="95.0" stroke="KHAKI" strokeType="INSIDE" />
+            <JFXButton fx:id="button12" layoutX="142.0" layoutY="199.0" onAction="#handleHourButtonAction" style="-fx-border-radius: 30; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-min-width: 35px; -fx-min-height: 35px; -fx-max-width: 35px; -fx-max-height: 35px;" text="12" textFill="#FFFFFF" userData="12" />
+            <JFXButton fx:id="button1" layoutX="179.0" layoutY="211.0" onAction="#handleHourButtonAction" style="-fx-border-radius: 30; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-min-width: 35px; -fx-min-height: 35px; -fx-max-width: 35px; -fx-max-height: 35px;" text="1" textFill="#FFFFFF" userData="1" />
+            <JFXButton fx:id="button2" layoutX="206.0" layoutY="237.0" onAction="#handleHourButtonAction" style="-fx-border-radius: 30; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI;  -fx-background-radius: 30; -fx-min-width: 35px; -fx-min-height: 35px; -fx-max-width: 35px; -fx-max-height: 35px;" text="2" textFill="#FFFFFF" userData="2" />
+            <JFXButton fx:id="button3" layoutX="214.0" layoutY="274.0" onAction="#handleHourButtonAction" style="-fx-border-radius: 30; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-min-width: 35px; -fx-min-height: 35px; -fx-max-width: 35px; -fx-max-height: 35px;" text="3" textFill="#FFFFFF" userData="3" />
+            <JFXButton fx:id="button4" layoutX="204.0" layoutY="309.0" onAction="#handleHourButtonAction" style="-fx-border-radius: 30; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-min-width: 35px; -fx-min-height: 35px; -fx-max-width: 35px; -fx-max-height: 35px;" text="4" textFill="#FFFFFF" userData="4" />
+            <JFXButton fx:id="button5" layoutX="178.0" layoutY="336.0" onAction="#handleHourButtonAction" style="-fx-border-radius: 30; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-min-width: 35px; -fx-min-height: 35px; -fx-max-width: 35px; -fx-max-height: 35px;" text="5" textFill="#FFFFFF" userData="5" />
+            <JFXButton fx:id="button6" layoutX="142.0" layoutY="347.0" onAction="#handleHourButtonAction" style="-fx-border-radius: 30; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-min-width: 35px; -fx-min-height: 35px; -fx-max-width: 35px; -fx-max-height: 35px;" text="6" textFill="#FFFFFF" userData="6" />
+            <JFXButton fx:id="button7" layoutX="105.0" layoutY="338.0" onAction="#handleHourButtonAction" style="-fx-border-radius: 30; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-min-width: 35px; -fx-min-height: 35px; -fx-max-width: 35px; -fx-max-height: 35px;" text="7" textFill="#FFFFFF" userData="7" />
+            <JFXButton fx:id="button8" layoutX="78.0" layoutY="310.0" onAction="#handleHourButtonAction" style="-fx-border-radius: 30; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-min-width: 35px; -fx-min-height: 35px; -fx-max-width: 35px; -fx-max-height: 35px;" text="8" textFill="#FFFFFF" userData="8" />
+            <JFXButton fx:id="button9" layoutX="68.0" layoutY="274.0" onAction="#handleHourButtonAction" style="-fx-border-radius: 30; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-min-width: 35px; -fx-min-height: 35px; -fx-max-width: 35px; -fx-max-height: 35px;" text="9" textFill="#FFFFFF" userData="9" />
+            <JFXButton fx:id="button10" layoutX="77.0" layoutY="238.0" onAction="#handleHourButtonAction" style="-fx-border-radius: 30; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-min-width: 35px; -fx-min-height: 35px; -fx-max-width: 35px; -fx-max-height: 35px;" text="10" textFill="#FFFFFF" userData="10" />
+            <JFXButton fx:id="button11" layoutX="103.0" layoutY="210.0" onAction="#handleHourButtonAction" style="-fx-border-radius: 30; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-min-width: 35px; -fx-min-height: 35px; -fx-max-width: 35px; -fx-max-height: 35px;" text="11" textFill="#FFFFFF" userData="11" />
+            <JFXButton fx:id="buttonAM" layoutX="139.0" layoutY="245.0" onAction="#handleHourButtonAction" mnemonicParsing="false" prefHeight="32.0" prefWidth="66.0" style="-fx-border-radius: 30; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-min-width: 40px; -fx-min-height: 40px; -fx-max-width: 40px; -fx-max-height: 40px;" text="AM" textFill="#FFFFFF" userData="13" />
+            <JFXButton fx:id="buttonOK" layoutX="139.0" layoutY="291.0" onAction="#handleOKButtonAction" mnemonicParsing="false" prefHeight="32.0" prefWidth="66.0" style="-fx-border-radius: 30; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-min-width: 40px; -fx-min-height: 40px; -fx-max-width: 40px; -fx-max-height: 40px;" text="OK" textFill="#FFFFFF" visible="false"  />
+         </children>
+      </AnchorPane>
+    </children>
+</VBox>

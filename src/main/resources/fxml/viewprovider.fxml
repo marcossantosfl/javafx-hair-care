@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vbox" prefHeight="400.0" prefWidth="302.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.custumer.ViewProviderController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="316.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="130.0" layoutX="96.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="salon-chair.png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="comboBox" layoutX="22.0" layoutY="195.0" onAction="#handleComboBoxAction" prefHeight="28.0" prefWidth="250.0" style="-fx-text-fill: WHITE; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-border-radius: 30;" />
+            <Label layoutX="65.0" layoutY="150.0" text="Select the Barber / Hairdresser" textFill="KHAKI" />
+            <ImageView fx:id="star1" fitHeight="20.0" fitWidth="20.0" layoutX="92.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="star.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="star2" fitHeight="20.0" fitWidth="20.0" layoutX="116.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="star.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="star3" fitHeight="20.0" fitWidth="20.0" layoutX="141.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="star.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="star4" fitHeight="20.0" fitWidth="20.0" layoutX="166.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="star.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="star5" fitHeight="20.0" fitWidth="20.0" layoutX="191.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="star.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="buttonChoose" layoutX="61.0" layoutY="308.0" onAction="#handleChooseButtonAction" prefHeight="45.0" prefWidth="178.0" style="-fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-border-radius: 30;" text="Choose this person" textFill="#FFFFFF" visible="false" />
+            <Hyperlink layoutX="7.0" layoutY="3.0" onAction="#handleBookingButtonAction" text="Bookings" textFill="KHAKI" />
+            <Hyperlink layoutX="7.0" layoutY="22.0" onAction="#handleBackButtonAction" text="Back" textFill="KHAKI" />
+            <Hyperlink layoutX="8.0" layoutY="41.0" onAction="#handleLogoutButtonAction" text="Logout" textFill="KHAKI" />
+            <Label fx:id="labelNone" layoutX="106.0" layoutY="227.0" text="None available" textFill="KHAKI" visible="false" />
+         </children>
+      </AnchorPane>
+    </children>
+</VBox>

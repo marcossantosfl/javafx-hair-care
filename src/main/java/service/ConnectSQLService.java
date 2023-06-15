@@ -1,0 +1,122 @@
+package service;
+
+import java.io.FileNotFoundException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ConnectSQLService {
+
+    /*
+	 * Database connection
+     */
+    private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
+    private static final String NAME = "Barbara_2019143";
+    private static final String CONNECTION = "jdbc:mysql://ip:3306/";
+    private static final String USER = "user";
+    private static final String PASSWORD = "pass";
+
+    private ConnectSQLService() {
+
+    }
+
+    /*
+	 * Create table if it does not exist (can create database as well in case of not exist.
+     */
+    public static void checkIfTableExists() throws SQLException, FileNotFoundException {
+    	Connection connection = null;
+    	Statement statement = null;
+    	ResultSet resultSet = null;
+    	
+        try {
+            connection = DriverManager.getConnection(CONNECTION + NAME, USER, PASSWORD);
+            statement = connection.createStatement();
+            connection.setAutoCommit(false);
+            //CREATE DATABASE/TABLE IF NOT EXISTS
+            String s = "CREATE TABLE IF NOT EXISTS `Barbara_2019143`.`Account` (`id` INT auto_increment  PRIMARY KEY,`name` VARCHAR(45) NOT NULL,`email` VARCHAR(45) NOT NULL,`number` VARCHAR(45) NOT NULL,`password` VARCHAR(45) NOT NULL,UNIQUE INDEX `id_UNIQUE` (`id` ASC),UNIQUE INDEX `email_UNIQUE` (`email` ASC));";
+            statement.executeUpdate(s);
+            s = "CREATE TABLE IF NOT EXISTS `Barbara_2019143`.`Role` (`id` INT NOT NULL,`Name` VARCHAR(45) NOT NULL,UNIQUE INDEX `id_UNIQUE` (`id` ASC), PRIMARY KEY (`id`));";
+            statement.executeUpdate(s);
+            s = "CREATE TABLE IF NOT EXISTS `Barbara_2019143`.`AccountRole` (`idAccount` INT NULL,`idRole` INT NULL,INDEX `idAccountKey_idx` (`idAccount` ASC),INDEX `idRoleKey_idx` (`idRole` ASC, `idAccount` ASC),CONSTRAINT `idAccount` FOREIGN KEY (`idAccount`) REFERENCES `Barbara_2019143`.`Account` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION, CONSTRAINT `idRole` FOREIGN KEY (`idRole`) REFERENCES `Barbara_2019143`.`Role` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION);";
+            statement.executeUpdate(s);
+            s = "INSERT INTO `Barbara_2019143`.`Role`(`id`,`name`)VALUES(0,'CUSTOMER');";
+            statement.executeUpdate(s);
+            s = "INSERT INTO `Barbara_2019143`.`Role`(`id`,`name`)VALUES(1,'PROVIDER');";
+            statement.executeUpdate(s);
+            s = "INSERT INTO `Barbara_2019143`.`Role`(`id`,`name`)VALUES(2,'ADMINISTRATOR');";
+            statement.executeUpdate(s);
+            s = "CREATE TABLE IF NOT EXISTS `Barbara_2019143`.`AccountWaiting` ( `id` INT NOT NULL,`location` INT NOT NULL,`accepted` TINYINT NOT NULL, UNIQUE INDEX `id_UNIQUE` (`id` ASC), PRIMARY KEY (`id`), CONSTRAINT `id` FOREIGN KEY (`id`) REFERENCES `Barbara_2019143`.`Account` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION);";
+            statement.executeUpdate(s);
+            s = "CREATE TABLE IF NOT EXISTS `Barbara_2019143`.`Provider` (`idProvider` INT NOT NULL,`location` INT NOT NULL,PRIMARY KEY (`idProvider`),UNIQUE INDEX `idProvider_UNIQUE` (`idProvider` ASC),CONSTRAINT `idProvider` FOREIGN KEY (`idProvider`) REFERENCES `Barbara_2019143`.`Account` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION);";
+            statement.executeUpdate(s);
+            s = "CREATE TABLE IF NOT EXISTS `Barbara_2019143`.`DateTimeProvider` (`id` INT NOT NULL AUTO_INCREMENT,`idCustumer` INT NULL,`idProvider` INT NOT NULL,`Year` INT NOT NULL,`Month` INT NOT NULL,`Day` INT NOT NULL,`Hour` INT NOT NULL,`Minute` INT NOT NULL,`Available` INT NOT NULL, `Accept` INT NOT NULL,PRIMARY KEY (`id`),UNIQUE INDEX `id_UNIQUE` (`id` ASC),INDEX `idCustumer_idx` (`idCustumer` ASC),CONSTRAINT `idCustumer` FOREIGN KEY (`idCustumer`) REFERENCES `Barbara_2019143`.`Account` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION);";
+            statement.executeUpdate(s);
+            connection.commit();
+            resultSet = statement.getResultSet();
+
+        } catch (SQLException exception) {
+			exception.getMessage();
+			if (null != connection) {
+				try {
+					connection.rollback();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+        finally {
+        	if (null != resultSet) {
+				resultSet.close();
+			}
+			if (null != statement) {
+				statement.close();
+			}
+
+			if (null != connection) {
+				connection.close();
+			}
+		}
+    }
+
+    /*
+	 * Get connection
+     */
+    public static Connection getDBConnection() throws SQLException {
+        Connection connection = null;
+        
+        /*
+         * Search for a driver first
+         */
+        try {
+            Class.forName(DRIVER);
+        } catch (ClassNotFoundException exception) {
+            System.out.println(exception.getMessage());
+            return connection;
+        }
+
+        /*
+         * Create database if it does not exist
+         */
+        try {
+        	checkIfTableExists();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+
+        try {
+            connection = DriverManager.getConnection(CONNECTION + NAME, USER, PASSWORD);
+            return connection;
+        } catch (SQLException exception) {
+            System.out.println(exception.getMessage());
+        }
+
+        return connection;
+    }
+}

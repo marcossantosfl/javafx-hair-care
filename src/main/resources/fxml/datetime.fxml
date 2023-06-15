@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="borderDatetime" fx:controller="controller.DateTimeController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="306.0" style="-fx-background-color: #1E90FF;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="103.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="scissors.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="316.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="105.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="calendar.png" />
+               </image>
+            </ImageView>
+            <JFXDatePicker fx:id="datePicker" visible="false" defaultColor="DODGERBLUE" layoutX="50.0" layoutY="200.0" nodeOrientation="RIGHT_TO_LEFT" />
+            <ComboBox fx:id="timePicker" visible="false" layoutX="80.0" layoutY="270.0" prefWidth="150.0"/>
+            <Label layoutX="85.0" layoutY="158.0" prefHeight="18.0" prefWidth="141.0" text="Select the day and time" />
+            <JFXButton fx:id="buttonBook" onAction="#handleBookButtonAction" visible="false" layoutX="118.0" layoutY="338.0" style="-fx-background-color: #1E90FF;" text="Book now" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

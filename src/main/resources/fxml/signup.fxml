@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vbox" prefHeight="400.0" prefWidth="302.0" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.custumer.SignUpController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="316.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="nameField" layoutX="82.0" layoutY="132.0" promptText="Full name" style="-fx-border-color: #F0E68C; -fx-background-color: #1C1C1C; -fx-border-radius: 30; -fx-text-fill: WHITE;" />
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="52.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="user.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="52.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="lock.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="126.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="users.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="emailField" layoutX="82.0" layoutY="172.0" promptText="Your email" style="-fx-border-color: #F0E68C; -fx-background-color: #1C1C1C; -fx-border-radius: 30; -fx-text-fill: WHITE;" />
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="52.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="email.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="phoneField" layoutX="82.0" layoutY="212.0" promptText="Your phone" style="-fx-border-color: #F0E68C; -fx-background-color: #1C1C1C; -fx-border-radius: 30; -fx-text-fill: WHITE;" />
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="52.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="phone-call.png" />
+               </image>
+            </ImageView>
+             <PasswordField fx:id="passwordField" layoutX="84.0" layoutY="248.0" promptText="Your password" style="-fx-border-color: #F0E68C; -fx-background-color: #1C1C1C; -fx-border-radius: 30; -fx-text-fill: WHITE;" />
+            <JFXToggleButton fx:id="toggleField" layoutX="199.0" layoutY="267.0" minWidth="40.0" onAction="#handleToggleButtonAction" prefHeight="32.0" prefWidth="40.0" style=" -fx-background-color: transparent;" />
+            <Label layoutX="56.0" layoutY="285.0" prefHeight="24.0" prefWidth="166.0" text="I am a service provider" textFill="KHAKI" />
+            <ComboBox fx:id="comboField" layoutX="83.0" layoutY="322.0" prefWidth="150.0" style="-fx-text-fill: WHITE; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-border-radius: 30;" visible="false" />
+            <JFXButton fx:id="signUp" layoutX="83.0" layoutY="322.0" onAction="#handleSignUpButtonAction" prefHeight="37.0" prefWidth="154.0" style="-fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-border-radius: 30;" text="Sign up" textFill="#FFFFFF" />
+            <Label fx:id="nameLabel" layoutX="82.0" layoutY="154.0" prefHeight="18.0" prefWidth="166.0" text="You must enter your name" textFill="KHAKI" visible="false" />
+            <Label fx:id="emailLabel" layoutX="82.0" layoutY="194.0" prefHeight="18.0" prefWidth="173.0" text="You must enter a valid email" textFill="KHAKI" visible="false" />
+            <Label fx:id="numberLabel" layoutX="84.0" layoutY="233.0" prefHeight="18.0" prefWidth="186.0" text="You must enter a valid number" textFill="KHAKI" visible="false" />
+            <Label fx:id="passwordLabel" layoutX="84.0" layoutY="269.0" prefHeight="18.0" prefWidth="202.0" text="You must enter a valid password" textFill="KHAKI" visible="false" />
+            <Label fx:id="locationLabel" layoutX="85.0" layoutY="303.0" prefHeight="18.0" prefWidth="173.0" text="You must select the location" textFill="KHAKI" visible="false" />
+            <Label fx:id="AccountExistsLabel" layoutX="80.0" layoutY="14.0" prefHeight="18.0" prefWidth="166.0" text="This account already exists!" textFill="KHAKI" visible="false" />
+            <Hyperlink layoutX="12.0" layoutY="1.0" onAction="#handleSignInButtonAction" text="Sign in" textFill="KHAKI" />
+         </children>
+      </AnchorPane>
+    </children>
+ </VBox>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+
+<VBox fx:id="vbox" fx:controller="controller.custumer.NewBooking" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="302.0" BorderPane.alignment="CENTER">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="316.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="98.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="calendar.png" />
+               </image>
+            </ImageView>
+             <JFXDatePicker fx:id="datePicker" defaultColor="KHAKI" layoutX="60.0" layoutY="200.0" nodeOrientation="INHERIT" style="-fx-text-fill: WHITE; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-border-radius: 30;" visible="false" />
+             <ComboBox fx:id="timePicker" layoutX="73.0" layoutY="249.0" prefWidth="150.0" style="-fx-text-fill: WHITE; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-border-radius: 30;" visible="false" />
+            <Label layoutX="85.0" layoutY="158.0" prefHeight="18.0" prefWidth="141.0" text="Select the day and time" textFill="KHAKI" />
+            <JFXButton fx:id="buttonBooking" layoutX="95.0" layoutY="304.0" onAction="#handleBookingButtonAction" prefHeight="34.0" prefWidth="114.0" style="-fx-text-fill: WHITE; -fx-background-color: #1C1C1C; -fx-border-color: KHAKI; -fx-background-radius: 30; -fx-border-radius: 30;" text="Book Now" textFill="#FFFFFF" visible="false" />
+            <Hyperlink onAction="#handleViewBookingButtonAction" layoutX="7.0" layoutY="3.0" text="Bookings" textFill="KHAKI" />
+            <Hyperlink onAction="#handleBackButtonAction" layoutX="7.0" layoutY="22.0" text="Back" textFill="KHAKI" />
+            <Hyperlink onAction="#handleLogoutButtonAction" layoutX="8.0" layoutY="41.0" text="Logout" textFill="KHAKI" />
+            <Label fx:id="labelNoTime1" visible="false" layoutX="22.0" layoutY="239.0" prefHeight="18.0" prefWidth="271.0" text="This person does not have any time available" textFill="KHAKI" />
+            <Label fx:id="labelNoTime2" visible="false" layoutX="117.0" layoutY="255.0" prefHeight="18.0" prefWidth="171.0" text="at the time" textFill="KHAKI" />
+         </children>
+      </AnchorPane>
+    </children>
+</VBox>

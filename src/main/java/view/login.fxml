@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="borderLogin" fx:controller="controller.LoginController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="306.0" style="-fx-background-color: #1E90FF;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="103.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="scissors.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="316.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="emailField" layoutX="82.0" layoutY="132.0" promptText="Your login" text="xxxx@outlook.com" />
+            <PasswordField fx:id="passwordField" layoutX="84.0" layoutY="175.0" promptText="Your password" />
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="52.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="email.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="52.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="lock.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="126.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="users.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="hyperlink" onAction="#handleCreateButtonAction" layoutX="79.0" layoutY="255.0" prefHeight="26.0" prefWidth="158.0" text="I do not have an account" />
+            <JFXButton fx:id="connectButton" onAction="#handleSubmitButtonAction" layoutX="96.0" layoutY="215.0" prefHeight="32.0" prefWidth="103.0" text="Sign in" textFill="#5b1d1d"  style="-fx-background-color: #1E90FF;" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

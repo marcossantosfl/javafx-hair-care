@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import com.jfoenix.controls.JFXButton?>
+
+<BorderPane fx:id="borderDublin" fx:controller="controller.DublinController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="306.0" style="-fx-background-color: #1E90FF;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="103.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="scissors.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="316.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="107.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="salon-chair.png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="comboBoxHairBarber" onAction="#handleHairBarberAction" layoutX="22.0" layoutY="195.0" prefHeight="28.0" prefWidth="250.0" />
+            <Label layoutX="54.0" layoutY="150.0" text="Select the Barber / Hairdresser" />
+            <ImageView fx:id="star1" visible="false" fitHeight="20.0" fitWidth="20.0" layoutX="92.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="star.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="star2" visible="false" fitHeight="20.0" fitWidth="20.0" layoutX="116.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="star.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="star3" visible="false" fitHeight="20.0" fitWidth="20.0" layoutX="141.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="star.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="star4" visible="false" fitHeight="20.0" fitWidth="20.0" layoutX="166.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="star.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="star5" visible="false" fitHeight="20.0" fitWidth="20.0" layoutX="191.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="star.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="buttonChoose" onAction="#handleChooseButtonAction" visible="false" layoutX="78.0" layoutY="324.0" prefHeight="32.0" prefWidth="155.0" text="Choose this person" style="-fx-background-color: #1E90FF;" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
